@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FCFCFC</color>
+    <color name="colorPrimaryDark">#999999</color>
+    <color name="colorAccent">#000000</color>
+    <color name="bottom_bar">#d9d9d9</color>
+    <color name="grey">#363636</color>
+    <color name="car_name">#86af9e</color>
+    <color name="white">#ffffff</color>
+</resources>

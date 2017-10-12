@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myfirstapp.InfoPage"
+    android:weightSum="2">
+
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="KentekenCheck.nl informatie"
+    android:textColor="@color/grey"
+    android:layout_alignParentTop="true"
+    android:paddingTop="10dp"
+    android:paddingBottom="8dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"/>
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView1"
+            android:layout_above="@+id/buttons"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/informatie"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:scrollbars="vertical"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+                </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:layout_alignBottom="@id/menu_line"
+            android:orientation="horizontal"
+            android:background="@android:color/transparent">
+                <ImageButton
+                    android:id="@+id/kentekens_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:src="@drawable/button_kentekens"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+                <ImageButton
+                    android:id="@+id/schademelding_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@drawable/button_schademeldingen"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:background="@android:color/transparent"
+                    android:cropToPadding="true"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+                <ImageButton
+                    android:id="@+id/km_standen_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/button_km_standen"
+                    android:paddingRight="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="15dp"
+                    android:cropToPadding="true"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+        </LinearLayout>
+        <TextView
+                android:id="@+id/menu_line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_above="@id/navigation"
+                android:background="@drawable/menu_line" />
+
+        <android.support.design.widget.BottomNavigationView
+                android:id="@+id/navigation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/bottom_bar_background"
+                app:itemBackground="@drawable/button_background_color_state"
+                app:itemIconTint="@drawable/button_color_state"
+                app:itemTextColor="@drawable/button_color_state"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:menu="@menu/navigation" />
+</RelativeLayout>
